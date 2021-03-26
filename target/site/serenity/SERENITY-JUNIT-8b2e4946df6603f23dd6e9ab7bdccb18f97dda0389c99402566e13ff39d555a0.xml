@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Book a flight" skipped="0" tests="1" time="65.6" timestamp="2021-03-25 07:24:59"><testcase name="Book the cheaper flight in Vivaair from Medellin to Bogota"><failure message="Expected the final price&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected the final price
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;</failure><system-err>Expected the final price
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;&#13;
-com.reto.retoscreenplay.stepdefinitions.BookFlightStepDefinitions.shouldSeeTheFlightCheaper(BookFlightStepDefinitions.java:59)&#13;
-✽.Andres should see the flight cheaper(src/test/resources/features/book_flight.feature:9)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Book a flight" skipped="0" tests="1" time="65.06" timestamp="2021-03-26 08:31:32"><testcase name="Book the cheaper flight in Vivaair from Medellin to Bogota"/></testsuite>

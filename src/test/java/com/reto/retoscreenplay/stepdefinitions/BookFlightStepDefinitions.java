@@ -1,8 +1,6 @@
 package com.reto.retoscreenplay.stepdefinitions;
 
 import com.reto.retoscreenplay.questions.TheFinalPrice;
-import com.reto.retoscreenplay.tasks.OneWayFlight;
-import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -16,9 +14,8 @@ import static com.reto.retoscreenplay.tasks.CloseNotification.andCloseNotificati
 import static com.reto.retoscreenplay.tasks.OneWayFlight.searchFlightWith;
 import static com.reto.retoscreenplay.tasks.RemoveExtraPrice.removeExtraPrice;
 import static com.reto.retoscreenplay.tasks.SelectFlightCheaper.selectFlightCheaper;
-import static com.reto.retoscreenplay.userinterface.SelectFlightCheaperPage.priceCheaper;
+import static com.reto.retoscreenplay.utils.GetFlightCheaper.priceCheaper;
 import static com.reto.retoscreenplay.utils.TomorrowDate.tomorrow;
-import static com.reto.retoscreenplay.utils.TransformText.getFinalPrice;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;

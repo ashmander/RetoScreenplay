@@ -1,8 +1,5 @@
 package com.reto.retoscreenplay.userinterface;
 
-import com.reto.retoscreenplay.utils.JavaScriptClick;
-import net.serenitybdd.core.annotations.findby.FindBy;
-import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.webdriver.SerenityWebdriverManager;
 import org.openqa.selenium.By;
@@ -11,16 +8,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
+import static com.reto.retoscreenplay.utils.GetFlightCheaper.getFlightCheaper;
 import static com.reto.retoscreenplay.utils.TransformText.getFinalPrice;
 
 public class SelectFlightCheaperPage {
-
-    public static String priceCheaper;
 
     public static Target FLIGHT_CHEAPER() {
         String id = getFlightCheaper(getFlights());
@@ -48,14 +42,5 @@ public class SelectFlightCheaperPage {
             prices.put(id, priceConverted);
         }
         return prices;
-    }
-
-    public static String getFlightCheaper(Map<String, Integer> prices) {
-        Map<String, Integer> orderAscendent = prices.entrySet()
-                .stream()
-                .sorted(Map.Entry.comparingByValue())
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-        priceCheaper = String.valueOf(orderAscendent.entrySet().stream().findFirst().get().getValue());
-        return orderAscendent.entrySet().stream().findFirst().get().getKey();
     }
 }

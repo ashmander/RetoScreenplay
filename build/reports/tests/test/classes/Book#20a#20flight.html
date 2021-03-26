@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m7.19s</div>
+<div class="counter">1m6.39s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,34 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard error</a>
+<a href="#tab1">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="Book the cheaper flight in Vivaair from Medellin to Bogota"></a>
-<h3 class="failures">Book the cheaper flight in Vivaair from Medellin to Bogota</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Expected the final price
-Expected: is &lt;true&gt;
-     but: was &lt;false&gt;
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:316)
-	at com.reto.retoscreenplay.stepdefinitions.BookFlightStepDefinitions.shouldSeeTheFlightCheaper(BookFlightStepDefinitions.java:59)
-	at ✽.Andres should see the flight cheaper(src/test/resources/features/book_flight.feature:9)
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -99,38 +78,36 @@ Expected: is &lt;true&gt;
 </tr>
 </thead>
 <tr>
-<td class="failures">Book the cheaper flight in Vivaair from Medellin to Bogota</td>
-<td class="failures">1m7.19s</td>
-<td class="failures">failed</td>
+<td class="success">Book the cheaper flight in Vivaair from Medellin to Bogota</td>
+<td class="success">1m6.39s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>mar 25, 2021 7:25:00 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+<pre>mar 26, 2021 8:31:33 AM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --lang=es,--disable-popup-b..., goog:chromeOptions: {args: [--lang=es, --disable-popup-blocking, --disable-download-notifica..., --start-maximized], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 4510
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 44160
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1616718304.595][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
-mar 25, 2021 7:25:04 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1616765497.609][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
+mar 26, 2021 8:31:38 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST FAILED: Book the cheaper flight in Vivaair from Medellin to Bogota
---------------------------------------------------------------------------
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Then the final price
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected the final priceExpected: is &lt;true&gt; but: was &lt;false&gt;
+TEST PASSED: Book the cheaper flight in Vivaair from Medellin to Bogota
+----------------------------------------------------------------------------
 </pre>
 </span>
 </div>
@@ -142,7 +119,7 @@ TEST FAILED: Book the cheaper flight in Vivaair from Medellin to Bogota
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.7</a> at Mar 25, 2021 7:26:11 PM</p>
+<a href="http://www.gradle.org">Gradle 6.7</a> at Mar 26, 2021 8:32:43 AM</p>
 </div>
 </div>
 </body>
