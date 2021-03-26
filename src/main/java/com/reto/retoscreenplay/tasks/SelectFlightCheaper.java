@@ -39,11 +39,9 @@ public class SelectFlightCheaper implements Task {
 
     public String getFlightCheaperId(List<WebElementFacade> flights, Actor actor) {
         Map<String, Integer> prices = new HashMap<>();
-        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>><< vuelos: "+flights.size());
         for(WebElement flight : flights) {
             String id = flight.getAttribute("id");
             Integer priceConverted = Integer.parseInt(getPriceClean(POSSIBLE_FLIGHT_CHEAPER.of(id).resolveFor(actor).getText()));
-            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"+priceConverted);
             prices.put(id, priceConverted);
         }
         return getFlightCheaper(prices, actor);
