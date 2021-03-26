@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Book a flight" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-26T13:31:32" hostname="CPX-M7F253C2HWP" time="66.393">
+<testsuite name="Book a flight" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-26T23:03:37" hostname="CPX-M7F253C2HWP" time="53.853">
   <properties/>
-  <testcase name="Book the cheaper flight in Vivaair from Medellin to Bogota" classname="Book a flight" time="66.393"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[mar 26, 2021 8:31:33 AM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <testcase name="Book the cheaper flight in Vivaair from Medellin to Bogota" classname="Book a flight" time="53.853"/>
+  <system-out><![CDATA[>>>>>>>>>>>>>>>>>>>>>>>>>>>>><< vuelos: 5
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>205525
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>181725
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>205525
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>205525
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>181725
+]]></system-out>
+  <system-err><![CDATA[mar 26, 2021 6:03:38 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: false, browserName: chrome, chrome.switches: --lang=es,--disable-popup-b..., goog:chromeOptions: {args: [--lang=es, --disable-popup-blocking, --disable-download-notifica..., --start-maximized], extensions: []}, loggingPrefs: org.openqa.selenium.logging..., platform: ANY, version: }
-Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 44160
+Starting ChromeDriver 88.0.4324.96 (68dba2d8a0b149a1d3afac56fa74648032bcf46b-refs/branch-heads/4324@{#1784}) on port 15396
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1616765497.609][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
-mar 26, 2021 8:31:38 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1616799822.250][WARNING]: This version of ChromeDriver has not been tested with Chrome version 89.
+mar 26, 2021 6:03:42 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  

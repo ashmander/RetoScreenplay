@@ -14,7 +14,6 @@ import static com.reto.retoscreenplay.tasks.CloseNotification.andCloseNotificati
 import static com.reto.retoscreenplay.tasks.OneWayFlight.searchFlightWith;
 import static com.reto.retoscreenplay.tasks.RemoveExtraPrice.removeExtraPrice;
 import static com.reto.retoscreenplay.tasks.SelectFlightCheaper.selectFlightCheaper;
-import static com.reto.retoscreenplay.utils.GetFlightCheaper.priceCheaper;
 import static com.reto.retoscreenplay.utils.TomorrowDate.tomorrow;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
@@ -53,6 +52,6 @@ public class BookFlightStepDefinitions {
 
     @Then("^Andres should see the flight cheaper$")
     public void shouldSeeTheFlightCheaper() {
-        theActorInTheSpotlight().should(seeThat(TheFinalPrice.isEqualTo(priceCheaper)));
+        theActorInTheSpotlight().should(seeThat(TheFinalPrice.isEqualToPriceCheaper()));
     }
 }

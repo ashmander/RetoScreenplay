@@ -33,9 +33,7 @@ public class OneWayFlightPage {
             .the("Destination city selected")
             .locatedBy("li[id*='destination']");
 
-    public static Target DATE_SELECTED(String date) {
-        return Target
-                .the("Date selected")
-                .locatedBy("//button[@date='"+date+"']");
-    }
+    public static final Target DATE = Target
+            .the("Date")
+            .locatedBy("//button[@date='{0}']");
 }

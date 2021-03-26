@@ -27,12 +27,11 @@ public class OneWayFlight implements Task {
                 Clear.field(LIST_DEPARTURE_CITIES),
                 Enter.theValue(oneWayFlight.getDepartureCity()).into(LIST_DEPARTURE_CITIES),
                 Click.on(DEPARTURE_CITY),
-                //Click.on(LIST_DESTINATION_CITIES),
                 Enter.theValue(oneWayFlight.getDestinationCity()).into(LIST_DESTINATION_CITIES),
                 Click.on(DESTINATION_CITY),
                 Click.on(CALENDAR),
-                WaitUntil.the(DATE_SELECTED(oneWayFlight.getDepartureDate().toString()), isVisible()),
-                Click.on(DATE_SELECTED(oneWayFlight.getDepartureDate().toString())),
+                WaitUntil.the(DATE.of(oneWayFlight.getDepartureDate().toString()), isVisible()),
+                Click.on(DATE.of(oneWayFlight.getDepartureDate().toString())),
                 Click.on(SEARCH_FLIGHT)
         );
     }
