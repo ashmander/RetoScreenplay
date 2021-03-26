@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Book flight cheaper from Medellin to Bogota</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c303ed7a38f243af8f9618a02dd9bb2a892dbb2d0a9fbcadee60e0d845fc2622.html">Book A Flight</a></span>
+                > <span class="truncate-60"><a
+                    href="8b2e4946df6603f23dd6e9ab7bdccb18f97dda0389c99402566e13ff39d555a0.html">Book the cheaper flight in Vivaair from Medellin to Bogota </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-03-2021 19:24</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Book A Flight </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a traveller<br />
+I want to book a flight<br />
+To able to travel
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Book the cheaper flight in Vivaair from Medellin to Bogota
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected the final priceExpected: is (true) but: was (false)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.reto.retoscreenplay.stepdefinitions.BookFlightStepDefinitions.shouldSeeTheFlightCheaper(BookFlightStepDefinitions.java:59)<br />✽.Andres should see the flight cheaper(src/test/resources/features/book_flight.feature:9)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource8759976583418331243.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="3d6bc53bb17bd8b7fc09f790cf00d856bea1b4e7d7b0bafe97cc3fd0289e2d12.png" title=" Given Andres want to flight to Bogota tomorrow" width="1920"/>
+                <img src="3d6bc53bb17bd8b7fc09f790cf00d856bea1b4e7d7b0bafe97cc3fd0289e2d12.png" title=" Andres opens the https://www.vivaair.com/co/es" width="1920"/>
+                <img src="3d6bc53bb17bd8b7fc09f790cf00d856bea1b4e7d7b0bafe97cc3fd0289e2d12.png" title=" Andres close notification" width="1920"/>
+                <img src="e5c479c15e2fbec030dbe0e6e735ee8b99443d5b85e5e2192a6b1d5ffb2ef645.png" title=" Andres clicks on Close notification" width="1920"/>
+                <img src="8672f00a7df4800a312f125c84553dbfe76907f1d132b49c895393d82b173d71.png" title=" Andres clicks on Close notification (completed)" width="1920"/>
+                <img src="5bd010d480495f23085b2c7fa409b0106f238806ea575d89c74b008897cdfb50.png" title=" Andres close notification (completed)" width="1920"/>
+                <img src="5bd010d480495f23085b2c7fa409b0106f238806ea575d89c74b008897cdfb50.png" title=" Given Andres want to flight to Bogota tomorrow (completed)" width="1920"/>
+                <img src="0d8352760199e2fb26b5d7a06423ca5f38d714ae08b81b4b44d9ce590747dd26.png" title=" When Andres book the flight from Medellin to Bogota" width="1920"/>
+                <img src="0d8352760199e2fb26b5d7a06423ca5f38d714ae08b81b4b44d9ce590747dd26.png" title=" Andres one way flight" width="1920"/>
+                <img src="0d8352760199e2fb26b5d7a06423ca5f38d714ae08b81b4b44d9ce590747dd26.png" title=" Andres clicks on Click on the checkbox one way" width="1920"/>
+                <img src="0d8352760199e2fb26b5d7a06423ca5f38d714ae08b81b4b44d9ce590747dd26.png" title=" Andres clicks on Click on the departure cities list" width="1920"/>
+                <img src="413ae0398ccf772118d09bd6f8dca19ce6dcaeb046e8deeab840007f69170b35.png" title=" Andres clicks on Click on the departure cities list (completed)" width="1920"/>
+                <img src="413ae0398ccf772118d09bd6f8dca19ce6dcaeb046e8deeab840007f69170b35.png" title=" Andres clears field Click on the departure cities list" width="1920"/>
+                <img src="ba68293daded8b25dbd54a06586e4cea897795ea5c6faf9371eb992837c3d715.png" title=" Andres clears field Click on the departure cities list (completed)" width="1920"/>
+                <img src="ba68293daded8b25dbd54a06586e4cea897795ea5c6faf9371eb992837c3d715.png" title=" Andres enters 'MDE' into Click on the departure cities list" width="1920"/>
+                <img src="9b44b743aa53e3110b435a4edd60941096c610e1756fa04cc1322c0b8149ce81.png" title=" Andres enters 'MDE' into Click on the departure cities list (completed)" width="1920"/>
+                <img src="9b44b743aa53e3110b435a4edd60941096c610e1756fa04cc1322c0b8149ce81.png" title=" Andres clicks on Departure city selected" width="1920"/>
+                <img src="ed0c00cfd2a4941eb1268809e3731997a9ed754df4853174f6abbb71aff2d697.png" title=" Andres clicks on Departure city selected (completed)" width="1920"/>
+                <img src="ed0c00cfd2a4941eb1268809e3731997a9ed754df4853174f6abbb71aff2d697.png" title=" Andres enters 'BOG' into Click on the destination cities list" width="1920"/>
+                <img src="d23c7b15857380787733fd1cb431421841be317fa0a4c18c7140eff7289e3de3.png" title=" Andres enters 'BOG' into Click on the destination cities list (completed)" width="1920"/>
+                <img src="d23c7b15857380787733fd1cb431421841be317fa0a4c18c7140eff7289e3de3.png" title=" Andres clicks on Destination city selected" width="1920"/>
+                <img src="e323fc62a99728de1f71eda3409fca59fd8ec1df0598192c76a20b307e725fbc.png" title=" Andres clicks on Destination city selected (completed)" width="1920"/>
+                <img src="e323fc62a99728de1f71eda3409fca59fd8ec1df0598192c76a20b307e725fbc.png" title=" Andres clicks on Click on the calendar to select a date" width="1920"/>
+                <img src="875ae11a9a8fdd234b4ab9b05ae6f7e7343746ec39806a105249d51b09feed7d.png" title=" Andres clicks on Click on the calendar to select a date (completed)" width="1920"/>
+                <img src="875ae11a9a8fdd234b4ab9b05ae6f7e7343746ec39806a105249d51b09feed7d.png" title=" Andres clicks on Date selected" width="1920"/>
+                <img src="7e1b579018acc8c215ab28ec0de178dac264cb5cdb8c9cadd57ec1001428c57a.png" title=" Andres clicks on Date selected (completed)" width="1920"/>
+                <img src="7e1b579018acc8c215ab28ec0de178dac264cb5cdb8c9cadd57ec1001428c57a.png" title=" Andres clicks on Click on the button to search flights" width="1920"/>
+                <img src="dac598b4f3c0fdc9b03da3dc5da4618c300a796cd24bcc9720cad23f7071b705.png" title=" Andres clicks on Click on the button to search flights (completed)" width="1920"/>
+                <img src="dac598b4f3c0fdc9b03da3dc5da4618c300a796cd24bcc9720cad23f7071b705.png" title=" Andres one way flight (completed)" width="1920"/>
+                <img src="5d97bdd541dc8b2da57de09c969052d0c7e1caffc08a3a3336e2a214a0e1ca52.png" title=" Andres select flight cheaper" width="1920"/>
+                <img src="ff7b8a7b8626da1ccd8d73d73b9513aa3e3b7fc8877925d24d025470ec629ca9.png" title=" Andres clicks on Select the flight cheaper" width="1920"/>
+                <img src="17ce227ad95dd055796ca7dbe6c14e8224a5826ca38fa18f729259b6b2a479d5.png" title=" Andres clicks on Select the flight cheaper (completed)" width="1920"/>
+                <img src="db32946c4d5e0a0b52a74f9ad5a5ca006045475e178a8e1d29918c458c9f6512.png" title=" Andres clicks on Select the detail of the flight" width="1920"/>
+                <img src="e50f1db9b35942a0de5fd37fe939c8146cee297c4d685d6ae02418cceba569a3.png" title=" Andres clicks on Select the detail of the flight (completed)" width="1920"/>
+                <img src="e50f1db9b35942a0de5fd37fe939c8146cee297c4d685d6ae02418cceba569a3.png" title=" Andres clicks on Continue" width="1920"/>
+                <img src="d652d051f3798455593e641977ce3105a346532c444250726c3064e0faf11c91.png" title=" Andres clicks on Continue (completed)" width="1920"/>
+                <img src="d652d051f3798455593e641977ce3105a346532c444250726c3064e0faf11c91.png" title=" Andres select flight cheaper (completed)" width="1920"/>
+                <img src="d652d051f3798455593e641977ce3105a346532c444250726c3064e0faf11c91.png" title=" Andres remove extra price" width="1920"/>
+                <img src="51bb9baddb62cb6d2dbdb3e7dcf65a803aba7c6d82c6b976c97883858edced02.png" title=" Andres clicks on Not select a seat" width="1920"/>
+                <img src="a67ba83e50be7a0a94cfbc54f859adc89f750b0de61046473640f62f34c73255.png" title=" Andres clicks on Not select a seat (completed)" width="1920"/>
+                <img src="a67ba83e50be7a0a94cfbc54f859adc89f750b0de61046473640f62f34c73255.png" title=" Andres clicks on Confirm that not select a seat" width="1920"/>
+                <img src="93d4898a3a1df4bc15d55206752c867a4fe33ae492500cfcae84857c2fa3d360.png" title=" Andres clicks on Confirm that not select a seat (completed)" width="1920"/>
+                <img src="fd714af0c5e27eb987f31c90accbb3d8cc92c1f853ea33ad1f9d66819cc0f186.png" title=" Andres clicks on Not select luggage" width="1920"/>
+                <img src="22edc0602d7cf58f818bf8e49bfd255b0dc85161d6484fed9f3a8deae617c175.png" title=" Andres clicks on Not select luggage (completed)" width="1920"/>
+                <img src="22edc0602d7cf58f818bf8e49bfd255b0dc85161d6484fed9f3a8deae617c175.png" title=" Andres clicks on Confirm no check in on the airport" width="1920"/>
+                <img src="dde078779bfe5648ebaa6f5ad05fe77cc20075831850ee2b0da28a50c2697ef8.png" title=" Andres clicks on Confirm no check in on the airport (completed)" width="1920"/>
+                <img src="dde078779bfe5648ebaa6f5ad05fe77cc20075831850ee2b0da28a50c2697ef8.png" title=" Andres clicks on Confirm no express board" width="1920"/>
+                <img src="7b95f60b3aaa274d508d0ce772489ba25caa289aac9a712a02d33e5d97d02d12.png" title=" Andres clicks on Confirm no express board (completed)" width="1920"/>
+                <img src="7b95f60b3aaa274d508d0ce772489ba25caa289aac9a712a02d33e5d97d02d12.png" title=" Andres clicks on Confirm no change flight date" width="1920"/>
+                <img src="73ac6c1a9241db7d3d86dcfca4b7901b482c81c142cef806d87bfe447c43efe9.png" title=" Andres clicks on Confirm no change flight date (completed)" width="1920"/>
+                <img src="73ac6c1a9241db7d3d86dcfca4b7901b482c81c142cef806d87bfe447c43efe9.png" title=" Andres clicks on Not buy insurance" width="1920"/>
+                <img src="d01e77ed5c5a12138b50498c79a288801cbedea0ff835e7a455b17efacb03147.png" title=" Andres clicks on Not buy insurance (completed)" width="1920"/>
+                <img src="d01e77ed5c5a12138b50498c79a288801cbedea0ff835e7a455b17efacb03147.png" title=" Andres remove extra price (completed)" width="1920"/>
+                <img src="d01e77ed5c5a12138b50498c79a288801cbedea0ff835e7a455b17efacb03147.png" title=" When Andres book the flight from Medellin to Bogota (completed)" width="1920"/>
+                <img src="d01e77ed5c5a12138b50498c79a288801cbedea0ff835e7a455b17efacb03147.png" title=" Then Andres should see the flight cheaper" width="1920"/>
+                <img src="73a86f0fca88fa5810373d9db392f2820136585556eb5a1ba066c164cb4d740e.png" title=" Then the final price" width="1920"/>
+                <img src="73a86f0fca88fa5810373d9db392f2820136585556eb5a1ba066c164cb4d740e.png" title=" Andres clicks on Flight information" width="1920"/>
+                <img src="73a86f0fca88fa5810373d9db392f2820136585556eb5a1ba066c164cb4d740e.png" title=" Then the final price (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.2</span>
+</div>
+</body>
+</html>
